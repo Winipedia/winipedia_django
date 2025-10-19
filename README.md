@@ -1,2 +1,2 @@
 # winipedia_django
-A utils package for django
+A utils package for django.
