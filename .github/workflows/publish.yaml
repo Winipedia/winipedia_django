@@ -1,19 +1,24 @@
-name: Publish to PyPI
+name: Publish Workflow
 'on':
   workflow_run:
     workflows:
-    - Create Release
+    - Release Workflow
     types:
     - completed
+permissions:
+  contents: read
+run-name: Publish Workflow
 jobs:
   publish:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v5
+      uses: actions/checkout@main
+    - name: Setup Git
+      run: git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        && git config --global user.name "github-actions[bot]"
     - name: Setup Python
-      uses: actions/setup-python@v6
+      uses: actions/setup-python@main
       with:
         python-version: 3.x
     - name: Install Poetry
@@ -22,3 +27,4 @@ jobs:
       run: poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
     - name: Build and publish to PyPI
       run: poetry publish --build
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
