@@ -16,6 +16,9 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 
+[[tool.poetry.packages]]
+include = "winipedia_django"
+
 [tool.poetry.dependencies]
 winipedia-utils = "*"
 django = "*"
@@ -54,6 +57,3 @@ files = "."
 testpaths = ["tests"]
 
 [tool.bandit]
-
-[[tool.poetry.packages]]
-include = "winipedia_django"
