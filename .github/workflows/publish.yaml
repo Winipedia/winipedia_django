@@ -8,9 +8,13 @@ name: Publish Workflow
 permissions:
   contents: read
 run-name: Publish Workflow
+defaults:
+  run:
+    shell: bash
 jobs:
   publish:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
     - name: Checkout repository
       uses: actions/checkout@main
@@ -20,11 +24,10 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@main
       with:
-        python-version: 3.x
-    - name: Install Poetry
-      run: curl -sSL https://install.python-poetry.org | python3 -
-    - name: Configure Poetry
+        python-version: 3.14.0
+    - name: Setup Poetry
+      uses: snok/install-poetry@main
+    - name: Configure Poetry with PyPI Token
       run: poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
     - name: Build and publish to PyPI
       run: poetry publish --build
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
