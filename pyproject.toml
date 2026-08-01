@@ -1,6 +1,6 @@
 [project]
 name = "winidjango"
-version = "4.14.15"
+version = "4.14.16"
 description = "A utility package for django"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -52,7 +52,6 @@ dev = [
   "django-stubs>=6.0.6",
   "mkdocs>=1.6.1",
   "mkdocs-material>=9.7.6",
-  "mkdocs-mermaid2-plugin>=1.2.3",
   "mkdocstrings[python]>=1.0.5",
   "pre-commit-hooks",
   "prek>=0.4.8",
