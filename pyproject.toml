@@ -1,6 +1,6 @@
 [project]
 name = "winidjango"
-version = "4.14.20"
+version = "4.14.23"
 description = "A utility package for django"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -96,6 +96,7 @@ addopts = [
   "--cov=winidjango",
   "--dist=worksteal",
   "--numprocesses=auto",
+  "--report-chars=a",
 ]
 filterwarnings = [
   "error",
