@@ -1,6 +1,6 @@
 [project]
 name = "winidjango"
-version = "4.14.39"
+version = "4.14.40"
 description = "A utility package for django"
 readme = "README.md"
 requires-python = ">=3.12"

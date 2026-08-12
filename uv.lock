@@ -1617,7 +1617,7 @@ wheels = [
 
 [[package]]
 name = "winidjango"
-version = "4.14.39"
+version = "4.14.40"
 source = { editable = "." }
 dependencies = [
     { name = "django" },
