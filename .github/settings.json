@@ -2,6 +2,7 @@
   "repository": {
     "name": "winidjango",
     "description": "A utility package for django",
+    "homepage": "https://Winipedia.github.io/winidjango",
     "default_branch": "main",
     "delete_branch_on_merge": true,
     "allow_update_branch": true,
