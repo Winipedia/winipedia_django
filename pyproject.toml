@@ -1,6 +1,6 @@
 [project]
 name = "winidjango"
-version = "4.14.42"
+version = "4.15.0"
 description = "A utility package for django"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -28,6 +28,7 @@ classifiers = [
 dependencies = [
   "django>=6.0.7",
   "django-stubs-ext>=6.0.6",
+  "filelock>=3.32.3",
   "polars>=1.42.1",
   "pyrig>=18.3.4",
   "pyrig-runtime>=3.5.2",
