@@ -1,6 +1,6 @@
 [project]
 name = "winidjango"
-version = "4.15.16"
+version = "4.15.18"
 description = "A utility package for django"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -47,6 +47,7 @@ winidjango = "pyrig_runtime.rig.cli.main:main"
 
 [dependency-groups]
 dev = [
+  "actionlint-py>=1.7.12.24",
   "bandit>=1.9.4",
   "deptry>=0.25.1",
   "detect-secrets>=1.5.0",
@@ -54,6 +55,7 @@ dev = [
   "mkdocstrings[python]>=1.0.5",
   "pre-commit-hooks",
   "prek>=0.4.8",
+  "pyflakes>=3.4.0",
   "pyrig>=18.3.4",
   "pyrig-pypi>=3.1.2",
   "pytest>=9.1.1",
@@ -73,6 +75,7 @@ dev = [
   "types-tqdm>=4.68.0.20260608",
   "typos>=1.48.0",
   "zensical>=0.0.52",
+  "zizmor>=1.30.0",
 ]
 
 [build-system]
